@@ -1,0 +1,21 @@
+{
+  "name": "ai-productivity-hub",
+  "version": "1.0.0",
+  "description": "AI Productivity Hub - Autonomous AI Business Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy via Hostinger or Vercel'"
+  },
+  "keywords": [
+    "ai",
+    "productivity",
+    "automation",
+    "artificial-intelligence",
+    "tools",
+    "affiliate-marketing"
+  ],
+  "author": "Autonomous AI Business Architect",
+  "license": "MIT"
+}
