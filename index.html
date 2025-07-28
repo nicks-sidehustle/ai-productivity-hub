@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Productivity Hub - Transform Your Workflow with AI</title>
+    <meta name="description" content="Discover the best AI tools for productivity, automation, and workflow optimization. Reviews, guides, and expert recommendations.">
+    <meta name="keywords" content="AI tools, productivity, automation, workflow, artificial intelligence, business tools">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+      
+      // Track affiliate clicks
+      function trackAffiliateClick(toolName, program, url) {
+        gtag('event', 'affiliate_click', {
+          'tool_name': toolName,
+          'affiliate_program': program,
+          'link_url': url,
+          'event_category': 'Affiliate Marketing',
+          'event_label': toolName,
+          'value': 1
+        });
+      }
+      
+      // Track email signups
+      function trackEmailSignup(source) {
+        gtag('event', 'email_signup', {
+          'signup_source': source,
+          'event_category': 'Lead Generation',
+          'event_label': source,
+          'value': 10
+        });
+      }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a90e2;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: #4a90e2; }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255,107,107,0.3);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover { transform: translateY(-5px); }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tools-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .tool-card:hover { transform: translateY(-3px); }
+        
+        .tool-card h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin: 0.5rem 0;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        
+        .affiliate-link {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .affiliate-link:hover { background: #357abd; }
+        
+        .newsletter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .newsletter-input {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            width: 300px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-button {
+            padding: 12px 25px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .newsletter-button:hover { background: #ff5252; }
+        
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover { color: #4a90e2; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .newsletter-form { flex-direction: column; align-items: center; }
+            .newsletter-input { width: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">AI Productivity Hub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tools">AI Tools</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transform Your Productivity with AI</h1>
+            <p>Discover the most powerful AI tools to automate your workflow, boost efficiency, and unlock your potential</p>
+            <a href="#tools" class="cta-button" onclick="trackEngagement('hero_cta')">Explore AI Tools</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">Why Choose AI Productivity Hub?</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem;">Your trusted source for AI-powered productivity solutions</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Expert Reviews</h3>
+                    <p>In-depth analysis of AI tools by productivity experts. Real-world testing and honest assessments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Latest AI Tools</h3>
+                    <p>Stay ahead with the newest AI innovations. We track and review cutting-edge productivity tools daily.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>ROI Focused</h3>
+                    <p>Tools that deliver measurable productivity gains. We focus on solutions that provide real business value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">Featured AI Productivity Tools</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1rem;">Hand-picked tools that are transforming how professionals work</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>ChatGPT Plus</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8/5)</div>
+                    <p>The ultimate AI writing and research assistant. Perfect for content creation, code generation, and problem-solving.</p>
+                    <div class="price">$20/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('ChatGPT Plus', 'OpenAI', 'https://chat.openai.com/plus')">Try ChatGPT Plus</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Notion AI</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7/5)</div>
+                    <p>Supercharge your workspace with AI-powered writing, brainstorming, and data analysis directly in Notion.</p>
+                    <div class="price">$10/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Notion AI', 'Notion', 'https://notion.so/ai')">Get Notion AI</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Claude Pro</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9/5)</div>
+                    <p>Advanced AI assistant for complex reasoning, analysis, and creative tasks. Excellent for research and writing.</p>
+                    <div class="price">$20/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Claude Pro', 'Anthropic', 'https://claude.ai/pro')">Try Claude Pro</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Zapier AI</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ (4.5/5)</div>
+                    <p>Automate workflows with AI-powered integrations. Connect apps and services without coding.</p>
+                    <div class="price">From $19.99/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Zapier AI', 'Zapier', 'https://zapier.com/ai')">Start Automating</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Grammarly Business</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ (4.4/5)</div>
+                    <p>AI-powered writing assistant that improves clarity, tone, and correctness across all your communications.</p>
+                    <div class="price">$15/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Grammarly Business', 'Grammarly', 'https://grammarly.com/business')">Improve Writing</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>GitHub Copilot</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6/5)</div>
+                    <p>AI pair programmer that helps you write code faster. Supports dozens of programming languages.</p>
+                    <div class="price">$10/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('GitHub Copilot', 'GitHub', 'https://github.com/copilot')">Code with AI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Stay Ahead of the AI Revolution</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Get weekly insights on the latest AI productivity tools, exclusive reviews, and automation strategies.</p>
+            
+            <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required id="newsletter-email">
+                <button type="submit" class="newsletter-button">Join 10,000+ Subscribers</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="#affiliate">Affiliate Disclosure</a>
+            </div>
+            <p>&copy; 2025 AI Productivity Hub. All rights reserved. | Helping professionals leverage AI for maximum productivity.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Newsletter signup handler
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            // Track signup
+            trackEmailSignup('homepage_newsletter');
+            
+            // Here you would integrate with your email service (Mailchimp, etc.)
+            alert('Thank you for subscribing! Check your email for confirmation.');
+            
+            // Reset form
+            document.getElementById('newsletter-email').value = '';
+        }
+        
+        // Track user engagement
+        function trackEngagement(section) {
+            gtag('event', 'engagement', {
+                'engagement_section': section,
+                'event_category': 'User Engagement',
+                'event_label': section
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Auto-track scroll depth
+        let scrollDepthTracked = [];
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            
+            [25, 50, 75, 90].forEach(threshold => {
+                if (scrollPercent >= threshold && !scrollDepthTracked.includes(threshold)) {
+                    scrollDepthTracked.push(threshold);
+                    gtag('event', 'scroll_depth', {
+                        'scroll_depth': threshold,
+                        'event_category': 'User Engagement',
+                        'event_label': threshold + '%'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
